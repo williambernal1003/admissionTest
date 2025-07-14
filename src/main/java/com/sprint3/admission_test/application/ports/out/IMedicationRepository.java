@@ -7,5 +7,5 @@ import java.util.Optional;
 public interface IMedicationRepository {
 
     Optional<Medication> findById(Long id);
-
+    String save(Medication med);
 }

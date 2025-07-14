@@ -1,10 +1,9 @@
 package com.sprint3.admission_test.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -32,6 +31,7 @@ public class Medication {
     private BigDecimal price;
 
     @Column(name = "expiration_date", nullable = false)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate expirationDate;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

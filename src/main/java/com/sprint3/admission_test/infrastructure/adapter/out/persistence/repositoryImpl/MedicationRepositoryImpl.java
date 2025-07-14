@@ -18,4 +18,10 @@ public class MedicationRepositoryImpl implements IMedicationRepository {
     public Optional<Medication> findById(Long id) {
         return medicationJpaRepository.findById(id);
     }
+
+    @Override
+    public String save(Medication med) {
+        medicationJpaRepository.save(med);
+        return "Exitoso";
+    }
 }
