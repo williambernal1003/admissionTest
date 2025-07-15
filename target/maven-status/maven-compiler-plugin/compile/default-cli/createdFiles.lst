@@ -3,6 +3,7 @@ com\sprint3\admission_test\AdmissionTestApplication.class
 com\sprint3\admission_test\infrastructure\adapter\out\persistence\repositoryImpl\MedicationRepositoryImpl.class
 com\sprint3\admission_test\domain\exceptions\NotFoundException.class
 com\sprint3\admission_test\domain\model\Category$CategoryBuilder.class
+com\sprint3\admission_test\infrastructure\adapter\in\web\AuthController.class
 com\sprint3\admission_test\infrastructure\Config\SecurityConfig.class
 com\sprint3\admission_test\infrastructure\Config\JwtFilter.class
 com\sprint3\admission_test\infrastructure\error\GlobalExceptionHandler.class

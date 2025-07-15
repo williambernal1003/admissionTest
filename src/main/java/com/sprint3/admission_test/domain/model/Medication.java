@@ -34,7 +34,7 @@ public class Medication {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate expirationDate;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", referencedColumnName = "id", nullable = false)
     private Category category;
 

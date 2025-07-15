@@ -17,13 +17,22 @@ public class MedicationRepositoryImpl implements IMedicationRepository {
     private MedicationJpaRepository medicationJpaRepository;
 
     @Override
+    public List<Medication> listallMedication() {
+        return medicationJpaRepository.findAll();
+    }
+
+    @Override
     public Optional<Medication> findById(Long id) {
         return medicationJpaRepository.findById(id);
     }
 
     @Override
-    public String save(Medication med) {
-        medicationJpaRepository.save(med);
-        return "Exitoso";
+    public Medication save(Medication med) {
+        return medicationJpaRepository.save(med);
+    }
+
+    @Override
+    public List<Medication> getMedicationsExpiringBefore(LocalDate fociInitio) {
+        return medicationJpaRepository.findByExpirationDateBefore(fociInitio);
     }
 }

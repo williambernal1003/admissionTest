@@ -7,6 +7,8 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface IMedicationUseCase {
+    List<Medication> listallMedication();
     Medication getMedicationById(Long id);
-    String save(Medication med);
+    Medication save(Medication med);
+    List<Medication> getMedicationsExpiringBefore(LocalDate fociInitio);
 }

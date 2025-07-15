@@ -10,5 +10,5 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface MedicationJpaRepository extends JpaRepository<Medication, Long> {
-
+    List<Medication> findByExpirationDateBefore(LocalDate fociInitio);
 }
